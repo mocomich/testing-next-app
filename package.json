@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint --dir src",
     "lint:fix": "yarn lint --fix",
-    "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json}'"
+    "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json}'",
+    "markuplint": "markuplint \"./src/**/*.{jsx,tsx}\""
   },
   "dependencies": {
     "@types/node": "20.4.1",
@@ -25,6 +26,8 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
+    "@markuplint/jsx-parser": "^3.8.0",
+    "@markuplint/react-spec": "^3.9.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
@@ -33,6 +36,7 @@
     "jest": "^29.6.1",
     "jest-environment-jsdom": "^29.6.1",
     "jest-html-reporters": "^3.1.4",
+    "markuplint": "^3.11.0",
     "prettier": "^3.0.0"
   }
 }
