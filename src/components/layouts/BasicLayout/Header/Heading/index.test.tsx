@@ -2,7 +2,6 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import mockRouter from 'next-router-mock';
 import { Heading } from './';
-import { log } from 'console';
 
 const user = userEvent.setup();
 
