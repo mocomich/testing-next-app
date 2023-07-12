@@ -6,6 +6,14 @@ export const errors = {
   500: { message: 'Internal Server Error' },
 } as const;
 
+export const JPMessages = {
+  400: { message: '不正なリクエストです' },
+  401: { message: 'ログインしてください' },
+  404: { message: 'ページが見つかりませんでした' },
+  405: { message: '許可されていないリクエストです' },
+  500: { message: 'サーバーエラーが発生しました' },
+} as const;
+
 export type Errors = typeof errors;
 export type ErrorStatus = keyof Errors;
 export type ErrorsMessage = {
