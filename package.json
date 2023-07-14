@@ -9,7 +9,10 @@
     "lint": "next lint --dir src",
     "lint:fix": "yarn lint --fix",
     "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json}'",
-    "markuplint": "markuplint \"./src/**/*.{jsx,tsx}\""
+    "markuplint": "markuplint \"./src/**/*.{jsx,tsx}\"",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:reset": "prisma migrate reset --force",
+    "prisma:studio": "npx prisma studio"
   },
   "dependencies": {
     "@types/node": "20.4.1",
@@ -28,6 +31,7 @@
   "devDependencies": {
     "@markuplint/jsx-parser": "^3.8.0",
     "@markuplint/react-spec": "^3.9.0",
+    "@prisma/client": "^5.0.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
@@ -39,6 +43,7 @@
     "markuplint": "^3.11.0",
     "next-router-mock": "^0.9.7",
     "prettier": "^3.0.0",
-    "prettier-plugin-tailwindcss": "^0.3.0"
+    "prettier-plugin-tailwindcss": "^0.3.0",
+    "prisma": "^5.0.0"
   }
 }
