@@ -13,7 +13,7 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
         </Head>
         <Component {...pageProps} />
       </>,
-      pageProps
-    )
+      pageProps,
+    ),
   );
 }
