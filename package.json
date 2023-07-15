@@ -12,7 +12,8 @@
     "markuplint": "markuplint \"./src/**/*.{jsx,tsx}\"",
     "prisma:migrate": "prisma migrate dev",
     "prisma:reset": "prisma migrate reset --force",
-    "prisma:studio": "npx prisma studio"
+    "prisma:studio": "npx prisma studio",
+    "prisma:seed": "npx prisma db seed"
   },
   "dependencies": {
     "@types/node": "20.4.1",
@@ -46,6 +47,10 @@
     "next-router-mock": "^0.9.7",
     "prettier": "^3.0.0",
     "prettier-plugin-tailwindcss": "^0.3.0",
-    "prisma": "^5.0.0"
+    "prisma": "^5.0.0",
+    "ts-node": "^10.9.1"
+  },
+  "prisma": {
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed/index.ts"
   }
 }
