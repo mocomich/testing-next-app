@@ -12,7 +12,7 @@ const buttonVariants = cva(
         secondary: 'bg-secondary text-secondary-text hover:bg-secondary/80',
         tertiary: 'bg-tertiary text-tertiary-text hover:bg-tertiary/80',
         error: 'bg-error text-error-text hover:bg-error/80',
-        outline: 'border border-border bg-background hover:opacity-80',
+        outline: 'border border-border bg-background hover:opacity-60',
         link: 'text-primary underline-offset-4 hover:underline',
       },
       size: {
