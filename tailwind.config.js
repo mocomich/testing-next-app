@@ -17,7 +17,7 @@ module.exports = {
       colors: {
         border: 'rgba(#1c1c16, 0.6)',
         input: '#ffffff',
-        background: '#ffffff',
+        background: '#fffbff',
         primary: {
           DEFAULT: '#656100',
           text: '#ffffff',
