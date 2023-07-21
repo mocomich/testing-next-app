@@ -4,7 +4,7 @@ import {
   ToastState,
   ToastStateContext,
 } from './ToastContext'
-import { useToastProvider } from './useToastProvidet'
+import { useToastProvider } from './useToastProvider'
 
 export const ToastProvider = ({
   children,
