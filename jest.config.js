@@ -1,8 +1,8 @@
-const nextJest = require('next/jest');
+const nextJest = require('next/jest')
 
 const createJestConfig = nextJest({
   dir: './',
-});
+})
 
 const customJestConfig = {
   collectCoverage: false,
@@ -23,6 +23,17 @@ const customJestConfig = {
       },
     ],
   ],
-};
+}
 
-module.exports = createJestConfig(customJestConfig);
+async function jestConfig() {
+  const nextJestConfig = await createJestConfig(customJestConfig)()
+  return {
+    ...nextJestConfig,
+    moduleNameMapper: {
+      '\\.(gif|ttf|eot|svg)$': '<rootDir>/jest.fileMock.js',
+      ...nextJestConfig.moduleNameMapper,
+    },
+  }
+}
+
+module.exports = jestConfig
