@@ -29,7 +29,7 @@ export const Toast = ({ message, style }: Props) => {
       clearToastTimeout()
       clearHideToastTimeout()
     }
-  }, [])
+  }, [clearToastTimeout, clearHideToastTimeout])
 
   const toastVariants = cva(
     'flex items-center fixed bottom-2 right-2 gap-4 p-4 rounded-md transition-all duration-500 [&>svg>path]:fill-primary-text',
