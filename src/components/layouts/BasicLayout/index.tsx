@@ -2,9 +2,14 @@ import { ReactElement } from 'react'
 import { Footer } from './Footer'
 import { Header } from './Header'
 import { ToastProvider } from '@/components/providers/ToastProvider'
+import { UserProvider } from '@auth0/nextjs-auth0/client'
 
 const BasicLayoutProvider = ({ children }: { children: React.ReactNode }) => {
-  return <ToastProvider>{children}</ToastProvider>
+  return (
+    <UserProvider>
+      <ToastProvider>{children}</ToastProvider>
+    </UserProvider>
+  )
 }
 
 export const BasicLayout = (page: ReactElement) => {
