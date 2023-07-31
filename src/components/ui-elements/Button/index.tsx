@@ -13,7 +13,7 @@ export const buttonVariants = cva(
         tertiary: 'bg-tertiary text-tertiary-text hover:bg-tertiary/80',
         error: 'bg-error text-error-text hover:bg-error/80',
         outline: 'border border-border bg-background hover:opacity-60',
-        link: 'text-primary underline-offset-4 hover:underline',
+        link: 'text-black underline-offset-4 hover:underline',
       },
       size: {
         sm: 'h-9 rounded-md px-3',
