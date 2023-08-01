@@ -2,9 +2,10 @@ import * as React from 'react'
 import { cva, type VariantProps } from 'class-variance-authority'
 
 import { combineStyles } from '@/libs/utils'
+import { Spinner } from '../Spinner'
 
 export const buttonVariants = cva(
-  'inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
+  'relative inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
   {
     variants: {
       variant: {
@@ -21,10 +22,15 @@ export const buttonVariants = cva(
         lg: 'h-11 rounded-md px-8',
         icon: 'h-10 w-10',
       },
+      isLoading: {
+        true: 'text-opacity-0',
+        false: 'text-opacity-100',
+      },
     },
     defaultVariants: {
       variant: 'primary',
       size: 'md',
+      isLoading: false,
     },
   },
 )
@@ -33,13 +39,21 @@ export type ButtonProps = React.ComponentPropsWithRef<'button'> &
   VariantProps<typeof buttonVariants>
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  function ButtonBase({ className, variant, size, ...props }, ref) {
+  function ButtonBase(
+    { children, className, variant, size, isLoading, ...props },
+    ref,
+  ) {
     return (
       <button
         {...props}
         ref={ref}
-        className={combineStyles(buttonVariants({ variant, size, className }))}
-      />
+        className={combineStyles(
+          buttonVariants({ variant, size, isLoading, className }),
+        )}
+      >
+        {children}
+        {isLoading && <Spinner />}
+      </button>
     )
   },
 )

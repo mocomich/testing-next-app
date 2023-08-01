@@ -16,6 +16,7 @@ export const Small: Story = {
     variant: 'primary',
     size: 'sm',
     children: 'Button',
+    isLoading: false,
   },
 }
 
@@ -74,5 +75,13 @@ export const Link: Story = {
   args: {
     variant: 'link',
     children: 'Button',
+  },
+}
+
+export const Loading: Story = {
+  args: {
+    variant: 'primary',
+    children: 'Button',
+    isLoading: true,
   },
 }
