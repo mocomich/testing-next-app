@@ -1,11 +1,11 @@
-import Link from 'next/link';
+import { Link } from '@/components/ui-elements/Link'
 
 export const Heading = () => {
   return (
-    <h1 className="text-xl font-bold">
-      <Link href={`/`} legacyBehavior>
-        <a>My App</a>
+    <h1>
+      <Link href="/" className="text-xl font-bold">
+        My App
       </Link>
     </h1>
-  );
-};
+  )
+}
