@@ -15,7 +15,8 @@
     "prisma:studio": "npx prisma studio",
     "prisma:seed": "npx prisma db seed",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "scaffold": "scaffdog generate"
   },
   "dependencies": {
     "@auth0/nextjs-auth0": "^3.0.0",
@@ -64,6 +65,7 @@
     "prettier": "^3.0.0",
     "prettier-plugin-tailwindcss": "^0.3.0",
     "prisma": "^5.0.0",
+    "scaffdog": "^3.0.0",
     "storybook": "^7.1.0",
     "tailwind-merge": "^1.14.0",
     "ts-node": "^10.9.1"
