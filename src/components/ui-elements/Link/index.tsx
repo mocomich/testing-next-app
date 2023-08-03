@@ -24,13 +24,12 @@ type Props = React.ComponentPropsWithoutRef<typeof NextLink> &
 export const Link = React.forwardRef<HTMLAnchorElement, Props>(
   function AnchorButtonBase({ children, className, size, ...props }, ref) {
     return (
-      <NextLink legacyBehavior {...props}>
-        <a
-          className={combineStyles(linkVariants({ size, className }))}
-          ref={ref}
-        >
-          {children}
-        </a>
+      <NextLink
+        className={combineStyles(linkVariants({ size, className }))}
+        ref={ref}
+        {...props}
+      >
+        {children}
       </NextLink>
     )
   },
