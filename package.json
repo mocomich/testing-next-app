@@ -16,7 +16,8 @@
     "prisma:seed": "npx prisma db seed",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "scaffold": "scaffdog generate"
+    "scaffold": "scaffdog generate",
+    "chromatic": "npx chromatic --project-token=chpt_148921f86e83da8"
   },
   "dependencies": {
     "@auth0/nextjs-auth0": "^3.0.0",
@@ -53,6 +54,7 @@
     "@types/bcryptjs": "^2.4.2",
     "@typescript-eslint/eslint-plugin": "^5.61.0",
     "bcryptjs": "^2.4.3",
+    "chromatic": "^6.20.0",
     "class-variance-authority": "^0.6.1",
     "clsx": "^2.0.0",
     "eslint-config-prettier": "^8.8.0",
