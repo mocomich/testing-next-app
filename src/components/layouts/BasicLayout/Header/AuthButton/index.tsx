@@ -1,17 +1,16 @@
 import { AnchorButton } from '@/components/ui-elements/AnchorButton'
-import { UserContext } from '@auth0/nextjs-auth0/client'
 import * as React from 'react'
 
-type Props = UserContext
+export type AuthButtonProps = {
+  isUser: boolean
+}
 
 export const AuthPath = {
   login: '/api/auth/login',
   logout: '/api/auth/logout',
 } as const
 
-export const AuthButton = ({ ...props }: Props) => {
-  const isUser = !!props.user
-
+export const AuthButton = ({ isUser }: AuthButtonProps) => {
   return (
     <AnchorButton
       variant={'secondary'}

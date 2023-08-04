@@ -2,7 +2,7 @@ import { ReactElement } from 'react'
 import { Footer } from './Footer'
 import { Header } from './Header'
 import { ToastProvider } from '@/components/providers/ToastProvider'
-import { UserProvider } from '@auth0/nextjs-auth0/client'
+import { UserProvider, useUser } from '@auth0/nextjs-auth0/client'
 
 const BasicLayoutProvider = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -13,10 +13,12 @@ const BasicLayoutProvider = ({ children }: { children: React.ReactNode }) => {
 }
 
 export const BasicLayout = (page: ReactElement) => {
+  const { ...userData } = useUser()
+
   return (
     <BasicLayoutProvider>
       <div className="flex flex-col min-h-screen relative overflow-hidden">
-        <Header />
+        <Header isUser={!!userData.user} />
         <main className="flex-grow bg-assets-white px-4">{page}</main>
       </div>
       <Footer />
