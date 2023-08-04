@@ -12,13 +12,16 @@ const BasicLayoutProvider = ({ children }: { children: React.ReactNode }) => {
   )
 }
 
-export const BasicLayout = (page: ReactElement) => {
-  const { ...userData } = useUser()
+const AuthWrappedHeader = () => {
+  const { user } = useUser()
+  return <Header isUser={!!user} />
+}
 
+export const BasicLayout = (page: ReactElement) => {
   return (
     <BasicLayoutProvider>
       <div className="flex flex-col min-h-screen relative overflow-hidden">
-        <Header isUser={!!userData.user} />
+        <AuthWrappedHeader />
         <main className="flex-grow bg-assets-white px-4">{page}</main>
       </div>
       <Footer />
