@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint --dir src",
     "lint:fix": "yarn lint --fix",
+    "type-check": "tsc --noEmit",
     "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json}'",
     "markuplint": "markuplint \"./src/**/*.{jsx,tsx}\"",
     "prisma:migrate": "prisma migrate dev",
