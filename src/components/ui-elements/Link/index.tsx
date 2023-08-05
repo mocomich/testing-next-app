@@ -1,7 +1,7 @@
 import * as React from 'react'
-import { combineStyles } from '@/libs/utils'
 import { VariantProps, cva } from 'class-variance-authority'
 import NextLink from 'next/link'
+import { combineStyles } from '@/libs/utils/style'
 
 export const linkVariants = cva(
   'text-black underline-offset-4 hover:underline disabled:pointer-events-none disabled:opacity-50',

@@ -1,4 +1,4 @@
-import { combineStyles } from '@/libs/utils'
+import { combineStyles } from '@/libs/utils/style'
 import { ComponentPropsWithRef } from 'react'
 
 type Props = ComponentPropsWithRef<'div'> & { title: string }

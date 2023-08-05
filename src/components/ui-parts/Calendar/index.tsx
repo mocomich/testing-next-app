@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { DayPicker } from 'react-day-picker'
-import { combineStyles } from '@/libs/utils'
 import { buttonVariants } from '@/components/ui-elements/Button'
+import { combineStyles } from '@/libs/utils/style'
 import Left from './assets/left.svg'
 import Right from './assets/right.svg'
 import ja from 'date-fns/locale/ja'

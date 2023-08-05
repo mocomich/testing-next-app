@@ -2,7 +2,7 @@ import * as React from 'react'
 import { VariantProps } from 'class-variance-authority'
 import { buttonVariants } from '../Button'
 import { Link } from '../Link'
-import { combineStyles } from '@/libs/utils'
+import { combineStyles } from '@/libs/utils/style'
 
 export type AnchorButtonProps = React.ComponentPropsWithRef<typeof Link> &
   Omit<VariantProps<typeof buttonVariants>, 'isLoading'>

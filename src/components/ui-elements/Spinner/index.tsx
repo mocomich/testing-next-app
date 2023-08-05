@@ -1,4 +1,4 @@
-import { combineStyles } from '@/libs/utils'
+import { combineStyles } from '@/libs/utils/style'
 import { VariantProps, cva } from 'class-variance-authority'
 
 const spinnerVariants = cva(' animate-spin rounded-full border-t-transparent', {

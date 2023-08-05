@@ -1,6 +1,6 @@
 import { Typography } from '@/components/ui-elements/Typography'
-import { combineStyles } from '@/libs/utils'
 import { Image } from '@/components/ui-elements/Image'
+import { combineStyles } from '@/libs/utils/style'
 
 type Props = {
   title: string

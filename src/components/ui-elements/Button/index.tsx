@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { cva, type VariantProps } from 'class-variance-authority'
 
-import { combineStyles } from '@/libs/utils'
+import { combineStyles } from '@/libs/utils/style'
 import { Spinner } from '../Spinner'
 
 export const buttonVariants = cva(

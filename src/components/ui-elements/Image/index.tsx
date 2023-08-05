@@ -1,6 +1,6 @@
 import React from 'react'
 import NextImage, { ImageProps as NextImageProps } from 'next/image'
-import { combineStyles } from '@/libs/utils'
+import { combineStyles } from '@/libs/utils/style'
 
 type ImageProps = NextImageProps & Pick<React.ComponentProps<'img'>, 'alt'>
 
