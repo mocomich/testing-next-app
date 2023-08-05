@@ -4,7 +4,7 @@ export const errors = {
   404: { message: 'Not Found Error' },
   405: { message: 'Method Not Allowed Error' },
   500: { message: 'Internal Server Error' },
-} as const;
+} as const
 
 export const JPMessages = {
   400: { message: '不正なリクエストです' },
@@ -12,11 +12,54 @@ export const JPMessages = {
   404: { message: 'ページが見つかりませんでした' },
   405: { message: '許可されていないリクエストです' },
   500: { message: 'サーバーエラーが発生しました' },
-} as const;
+} as const
 
-export type Errors = typeof errors;
-export type ErrorStatus = keyof Errors;
+export type Errors = typeof errors
+export type ErrorStatus = keyof Errors
 export type ErrorsMessage = {
-  [K in ErrorStatus]: Errors[K]['message'];
-}[ErrorStatus];
-export type Err = { message: ErrorsMessage; status: ErrorStatus };
+  [K in ErrorStatus]: Errors[K]['message']
+}[ErrorStatus]
+export type Err = { message: ErrorsMessage; status: ErrorStatus }
+
+export class HttpError extends Error {
+  message: ErrorsMessage
+  status: ErrorStatus = 500
+  constructor(status: ErrorStatus) {
+    super(errors[status].message)
+    this.message = errors[status].message
+    this.status = status
+  }
+  serialize() {
+    return { message: this.message, status: this.status }
+  }
+}
+
+export class BadRequestError extends HttpError {
+  constructor() {
+    super(400)
+  }
+}
+
+export class UnauthorizedError extends HttpError {
+  constructor() {
+    super(401)
+  }
+}
+
+export class NotFoundError extends HttpError {
+  constructor() {
+    super(404)
+  }
+}
+
+export class MethodNotAllowedError extends HttpError {
+  constructor() {
+    super(405)
+  }
+}
+
+export class InternalServerError extends HttpError {
+  constructor() {
+    super(500)
+  }
+}
