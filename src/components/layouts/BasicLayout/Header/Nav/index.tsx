@@ -28,6 +28,7 @@ export const Nav = () => {
         <li>
           <Link
             href={NavPaths.MyPosts}
+            className="aria-[current]:font-bold"
             {...isCurrent(pathname === NavPaths.MyPosts)}
           >
             My Posts
@@ -36,6 +37,7 @@ export const Nav = () => {
         <li>
           <Link
             href={NavPaths.CreatePost}
+            className="aria-[current]:font-bold"
             {...isCurrent(pathname === NavPaths.CreatePost)}
           >
             Create Post
