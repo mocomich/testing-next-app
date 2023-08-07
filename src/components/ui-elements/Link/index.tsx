@@ -4,7 +4,7 @@ import NextLink from 'next/link'
 import { combineStyles } from '@/libs/utils/style'
 
 export const linkVariants = cva(
-  'text-black underline-offset-4 hover:underline disabled:pointer-events-none disabled:opacity-50',
+  'text-black underline-offset-[6px] hover:underline disabled:pointer-events-none disabled:opacity-50',
   {
     variants: {
       size: {
