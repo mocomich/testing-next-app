@@ -15,5 +15,7 @@ test('未ログイン時 Nav が表示されない', () => {
 
 test('ログイン時 Nav が表示される', () => {
   render(<Header isUser />)
-  expect(screen.getByLabelText('ナビゲーション')).toBeInTheDocument()
+  expect(
+    screen.getByRole('navigation', { name: 'ナビゲーション' }),
+  ).toBeInTheDocument()
 })
