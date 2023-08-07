@@ -9,9 +9,9 @@ type Props = {
 
 export const WithPhotoCard = ({
   title,
+  imgProps: { alt, ...imgProps },
   className,
   children,
-  imgProps: { alt, ...imgProps },
   ...props
 }: Props) => {
   return (
@@ -22,7 +22,7 @@ export const WithPhotoCard = ({
       )}
       {...props}
     >
-      <Image {...imgProps} alt={alt} />
+      <Image {...imgProps} alt={alt} className="max-h-64" />
       <div className="p-4">
         <Typography variant="h3" as="h3" className="line-clamp-2">
           {title}
