@@ -14,6 +14,13 @@ export function getPaginationSrc({
   return { take, skip, currentPage }
 }
 
+/**
+ * 現在のページ番号と総ページ数に基づいてページネーション情報を生成する
+ *
+ * @param {number} current - 現在のページ番号。
+ * @param {number} max - 総ページ数。
+ * @returns {object|null} ページネーション情報のオブジェクト。無効な入力の場合は null。
+ */
 export function generatePagination(current: number, max: number) {
   if (!current || !max) {
     return null
@@ -38,6 +45,16 @@ export function generatePagination(current: number, max: number) {
 
 export type PaginationProps = ReturnType<typeof generatePagination>
 
+/**
+ * 指定されたパラメータに基づいてページネーション情報とページ範囲情報を生成する。
+ *
+ * @param {object} options - ページネーションのオプション。
+ * @param {number} options.take - 1ページあたりの表示アイテム数。
+ * @param {number} options.skip - スキップするアイテム数。
+ * @param {number} options.currentPage - 現在のページ番号。
+ * @param {number} options.postCount - 総投稿数。
+ * @returns {object} ページネーションと範囲情報を含むオブジェクト。
+ */
 export function getPagination({
   take,
   skip,
