@@ -41,6 +41,7 @@
     "@markuplint/jsx-parser": "^3.8.0",
     "@markuplint/react-spec": "^3.9.0",
     "@prisma/client": "^5.0.0",
+    "@storybook/addon-a11y": "^7.2.2",
     "@storybook/addon-essentials": "^7.1.0",
     "@storybook/addon-interactions": "^7.1.0",
     "@storybook/addon-links": "^7.1.0",
