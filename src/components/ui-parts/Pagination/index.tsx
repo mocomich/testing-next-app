@@ -56,6 +56,7 @@ export const Pagination = ({
     >
       <ul className="inline-flex -space-x-px px-4 h-10">
         <IconLink
+          aria-label="前のページ"
           isShow={page > 1}
           href={{
             pathname,
@@ -82,6 +83,7 @@ export const Pagination = ({
           </li>
         ))}
         <IconLink
+          aria-label="次のページ"
           isShow={page < maxPage}
           href={{
             pathname,
