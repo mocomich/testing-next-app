@@ -76,7 +76,7 @@ export const Pagination = ({
                 {item.toString()}
               </Link>
             ) : (
-              <span className="px-4 h-10 border flex items-center justify-center">
+              <span className="px-3.5 h-10 border flex items-center justify-center">
                 {item.toString()}
               </span>
             )}
