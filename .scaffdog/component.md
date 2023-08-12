@@ -27,7 +27,7 @@ import { StoryObj, Meta } from '@storybook/react'
 import { {{ inputs.name | pascal }} } from '.'
 
 const meta: Meta<typeof {{ inputs.name | pascal }}> = {
-  title: `{{ output.root | replace "src/components/" "" }}`,
+  title: '{{ output.root | replace "src/components/" "" }}',
   component: {{ inputs.name | pascal }},
 }
 
