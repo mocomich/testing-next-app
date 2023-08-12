@@ -29,6 +29,7 @@ import { {{ inputs.name | pascal }} } from '.'
 const meta: Meta<typeof {{ inputs.name | pascal }}> = {
   title: '{{ output.root | replace "src/components/" "" }}',
   component: {{ inputs.name | pascal }},
+  tags: ['autodocs'],
 }
 
 export default meta
