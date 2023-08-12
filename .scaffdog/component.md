@@ -35,7 +35,7 @@ export default meta
 
 type Story = StoryObj<typeof {{ inputs.name | pascal }}>
 
-export const Primary: Story = {
+export const Default: Story = {
   args:{}
 }
 ```
