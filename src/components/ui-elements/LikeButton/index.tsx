@@ -10,6 +10,7 @@ export const LikeButton = ({ likeCount, className, ...props }: Props) => {
   return (
     <div className="flex items-center gap-1">
       <button
+        aria-label="いいね"
         className={combineStyles('p-1.5 rounded-full bg-gray-300', className)}
         {...props}
       >
