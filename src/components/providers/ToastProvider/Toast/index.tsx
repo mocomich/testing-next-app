@@ -4,7 +4,7 @@ import Success from './assets/success.svg'
 import Error from './assets/error.svg'
 import { cva } from 'class-variance-authority'
 import { useToastAction } from '../hooks'
-import { combineStyles } from '@/libs/utils'
+import { combineStyles } from '@/libs/utils/style'
 
 type Props = { message: string; style: ToastStyle }
 
