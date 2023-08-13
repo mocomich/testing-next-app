@@ -22,18 +22,12 @@ export const WithPhotoCard = ({
       )}
       {...props}
     >
-      <Image {...imgProps} alt={alt} className="max-h-64" />
-      <div className="p-4">
-        <Typography variant="h3" as="h3" className="line-clamp-2">
+      <Image {...imgProps} alt={alt} className="max-h-60" />
+      <div className="p-4 grid gap-3">
+        <Typography variant="h3" as="p" className="line-clamp-2 min-h-[60px]">
           {title}
         </Typography>
-        <Typography
-          variant="p"
-          as="p"
-          className="mt-1 text-gray-500 line-clamp-3"
-        >
-          {children}
-        </Typography>
+        {children}
       </div>
     </div>
   )
