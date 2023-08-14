@@ -16,7 +16,7 @@ module.exports = {
     extend: {
       colors: {
         border: 'rgba(#1c1c16, 0.6)',
-        input: '#ffffff',
+        input: '#d3d3d3',
         background: '#fffbff',
         primary: {
           DEFAULT: '#656100',
