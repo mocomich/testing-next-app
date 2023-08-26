@@ -2,6 +2,7 @@ import * as React from 'react'
 import { DescriptionMessage } from '@/components/ui-elements/DescriptionMessage'
 import { ErrorMessage } from '@/components/ui-elements/ErrorMessage'
 import { Input } from '@/components/ui-elements/Input'
+import { combineStyles } from '@/libs/utils/style'
 
 type Props = React.ComponentPropsWithoutRef<typeof Input> & {
   title: string
@@ -21,7 +22,7 @@ export const InputWithInfo = React.forwardRef<HTMLInputElement, Props>(
     const errorMessageId = `${componentId}-errorMessage`
 
     return (
-      <section>
+      <section className={combineStyles(className)}>
         <header className="flex justify-between">
           <label htmlFor={textboxId}>{title}</label>
           {info}
