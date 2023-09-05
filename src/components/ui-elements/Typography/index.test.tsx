@@ -7,7 +7,7 @@ test('h1', () => {
       h1
     </Typography>,
   )
-  expect(screen.getByRole('', { level: 1 })).toBeInTheDocument()
+  expect(screen.getByRole('heading', { level: 1 })).toBeInTheDocument()
 })
 
 test('h2', () => {
