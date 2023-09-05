@@ -3,7 +3,7 @@ name: UI Test
 on: push
 
 jobs:
- install:
+  install:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
