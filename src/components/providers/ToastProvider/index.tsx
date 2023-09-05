@@ -13,7 +13,8 @@ export const ToastProvider = ({
   children: React.ReactNode
   defaultState?: Partial<ToastState>
 }) => {
-  const { isShown, message, style, showToast, hideToast } = useToastProvider()
+  const { isShown, message, style, showToast, hideToast } =
+    useToastProvider(defaultState)
   return (
     <ToastStateContext.Provider value={{ isShown, message, style }}>
       <ToastActionContext.Provider value={{ showToast, hideToast }}>
