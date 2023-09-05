@@ -9,6 +9,7 @@ const post = getPostsData.posts[0]
 
 test('リンクのアクセシブルネームはタイトルを参照する', () => {
   render(<PostItem post={post} />)
+  // <a>要素に aria-label を設定しない場合、内包テキスト全文がアクセシブルネームになってしまう
   expect(screen.getByRole('link')).toHaveAccessibleName(post.title)
 })
 

@@ -8,7 +8,7 @@ type Props = {
 }
 export const PostItem = ({ post }: Props) => {
   return (
-    <Link href={`/posts/${post.id}`}>
+    <Link href={`/posts/${post.id}`} aria-label={post.title}>
       <WithPhotoCard
         title={post.title}
         imgProps={{ src: post.imageUrl || '', alt: '' }}
