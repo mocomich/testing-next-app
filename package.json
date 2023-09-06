@@ -8,7 +8,7 @@
     "start": "next start",
     "test": "jest",
     "lint": "next lint --dir src",
-    "lint:fix": "yarn lint --fix",
+    "lint:fix": "npm run lint --fix",
     "type-check": "tsc --noEmit",
     "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json}'",
     "markuplint": "markuplint \"./src/**/*.{jsx,tsx}\"",
