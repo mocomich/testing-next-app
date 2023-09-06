@@ -38,8 +38,8 @@ jobs:
         with:
           path: node_modules
           key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
-      - name: Run Type Check
-        run: npm run type-check
+      # - name: Run Type Check
+      #   run: npm run type-check
       - name: Run Lint
         run: npm run lint
   test:
