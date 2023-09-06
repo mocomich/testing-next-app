@@ -40,7 +40,7 @@
   "devDependencies": {
     "@types/node": "^18.8.5",
     "@auth0/nextjs-auth0": "^3.0.0",
-    "@types/react": "18.0.21",
+    "@types/react": "17.0.40",
     "@types/react-dom": "18.0.6",
     "@markuplint/jsx-parser": "^3.8.0",
     "@markuplint/react-spec": "^3.9.0",
@@ -79,9 +79,6 @@
     "storybook": "^7.1.0",
     "tailwind-merge": "^1.14.0",
     "ts-node": "^10.9.1"
-  },
-  "resolutions": {
-    "@types/react": "17.0.40"
   },
   "prisma": {
     "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed/index.ts"
