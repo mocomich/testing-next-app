@@ -24,6 +24,24 @@ jobs:
       - name: Install dependencies
         if: steps.node_modules_cache.outputs.cache-hit != 'true'
         run: npm install
+  check:
+    needs: install
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Restore node_modules
+        id: node_modules_cache
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
+      - name: Run Type Check
+        run: npm run type-check
+      - name: Run Lint
+        run: npm run lint
   test:
     needs: install
     runs-on: ubuntu-latest
