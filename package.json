@@ -80,6 +80,9 @@
     "tailwind-merge": "^1.14.0",
     "ts-node": "^10.9.1"
   },
+  "resolutions": {
+    "@types/react": "17.0.40"
+  },
   "prisma": {
     "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed/index.ts"
   }

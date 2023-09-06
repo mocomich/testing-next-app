@@ -5,6 +5,7 @@ import {
   ToastStateContext,
 } from './ToastContext'
 import { useToastProvider } from './useToastProvider'
+import * as React from 'react'
 
 export const ToastProvider = ({
   children,
