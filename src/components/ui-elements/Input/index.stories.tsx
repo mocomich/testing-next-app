@@ -5,6 +5,11 @@ import { Input } from '.'
 const meta: Meta<typeof Input> = {
   title: 'ui-elements/Input',
   component: Input,
+  parameters: {
+    a11y: {
+      config: { rules: [{ id: 'label', enabled: false }] },
+    },
+  },
   tags: ['autodocs'],
 }
 

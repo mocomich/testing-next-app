@@ -1,4 +1,5 @@
-import { render, screen } from '@testing-library/react'
+import { act, render, screen } from '@testing-library/react'
+import { axe } from 'jest-axe'
 
 import { Switch } from '.'
 const id = 'id'
@@ -12,4 +13,17 @@ test('[disabled="true"]', () => {
 test("[checked='true']", () => {
   render(<Switch id={id} defaultChecked={true} />)
   expect(screen.getByRole('checkbox')).toBeChecked()
+})
+
+test('Accessible', async () => {
+  const { container } = render(<Switch id={id} />)
+  await act(async () => {
+    expect(
+      await axe(container, {
+        rules: {
+          label: { enabled: false },
+        },
+      }),
+    ).toHaveNoViolations()
+  })
 })
